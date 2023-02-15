@@ -13,8 +13,10 @@ const clicked = event => {
                 newChar.textContent = response.data.name;
                 main.appendChild(newChar);
             })
+            .catch(err => console.log(err));
         }
     })
+    .catch(err => console.log(err));
 }
 
 button.addEventListener('click',clicked);
